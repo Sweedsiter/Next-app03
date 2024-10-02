@@ -1,7 +1,7 @@
 import connectMongoDB from "@/libs/mongodb";
 import { NextResponse } from "next/server";
 
-import Topic from "@/models/modelProduct";
+import Topic from "@/models/topic";
 
 // Add product
 export async function POST(request) {

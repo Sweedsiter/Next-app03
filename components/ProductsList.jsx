@@ -1,11 +1,9 @@
-"use client";
-import { useRouter } from "next/navigation";
-import React, { useState } from "react";
 import Link from "next/link";
+import { HiPencilAlt } from "react-icons/hi";
 
-const getProducts = async () => {
+const getTopics = async () => {
   try {
-    const res = await fetch("https://46t6s8-3000.csb.app/api/products", {
+    const res = await fetch("https://46t6s8-3000.csb.app/api/topics", {
       cache: "no-store",
     });
     if (!res.ok) {
@@ -17,27 +15,14 @@ const getProducts = async () => {
   }
 };
 
-export default async function ProductsList() {
-  const [count, setCount] = useState(0);
-  const router = useRouter();
-  const { topic } = getProducts();
-  console.log(topic);
-
-  const handleSubmit = () => {
-    router.push("/");
-  };
+export default async function TopicsList() {
+  const { topics } = await getTopics();
   return (
-    <div className="p-5">
-      {topic ? <span>yes geted</span> : <span>No product</span>}
-      <p>You clicked {count} asdsadsad</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-      <button onClick={handleSubmit} className="px-2 text-red-600">
-        Click me Fre
-      </button>
-      {!topic ? (
+    <>
+      {!topics ? (
         <span>Please wait...</span>
       ) : (
-        topic.map((t, index) => (
+        topics.map((t, index) => (
           <div
             className="p-4 border border-slate-300 m-2 flex justify-between grap-5 items-start"
             key={index}
@@ -48,9 +33,6 @@ export default async function ProductsList() {
             </div>
 
             <div className="flex">
-              <div className="cl-red px-2">
-                <RemoveBtn id={t._id} />
-              </div>
               <Link href={`/editTopic/${t._id}`}>
                 <HiPencilAlt size={24} />
               </Link>
@@ -58,6 +40,6 @@ export default async function ProductsList() {
           </div>
         ))
       )}
-    </div>
+    </>
   );
 }
