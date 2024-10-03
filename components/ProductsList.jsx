@@ -22,9 +22,9 @@ export default async function TopicsList() {
       {!topics ? (
         <span>Please wait...</span>
       ) : (
-        topics.map((t, index) => (
+        topics?.map((t, index) => (
           <div
-            className="p-4 border border-slate-300 m-2 flex justify-between grap-5 items-start"
+            className="p-4 border border-slate-300 m-2 flex justify-between flex-col items-center grap-5 items-start w-40 h-40"
             key={index}
           >
             <div>
@@ -33,7 +33,7 @@ export default async function TopicsList() {
             </div>
 
             <div className="flex">
-              <Link href={`/editTopic/${t._id}`}>
+              <Link href={`/product/${t._id}`}>
                 <HiPencilAlt size={24} />
               </Link>
             </div>

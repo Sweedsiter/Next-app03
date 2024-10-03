@@ -9,7 +9,7 @@ export default function Navbar() {
 
   const items = (
     <div className="absolute text-white top-15 right-0 bg-slate-900">
-      {search ? search : ""}
+      {!search ? null : search}
     </div>
   );
   return (

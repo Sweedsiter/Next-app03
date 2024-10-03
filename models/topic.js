@@ -3,6 +3,7 @@ const topicSchema = new Schema(
   {
     title: String,
     description: String,
+    Image: String,
   },
   {
     timestamps: true,

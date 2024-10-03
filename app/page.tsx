@@ -2,7 +2,9 @@ import ProductsList from "@/components/ProductsList";
 export default function Home() {
   return (
     <>
-      <ProductsList />
+      <div className="flex w-full flex-wrap h-max">
+        <ProductsList />
+      </div>
     </>
   );
 }
