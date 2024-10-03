@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HiPencilAlt } from "react-icons/hi";
+import { GiCondorEmblem } from "react-icons/gi";
 
 const getTopics = async () => {
   try {
@@ -24,20 +24,14 @@ export default async function TopicsList() {
       ) : (
         topics?.map((t, index) => (
           <div
-            className="p-4 border border-slate-300 m-2 flex justify-between flex-col items-center grap-5 items-start w-40 "
+            className="border border-slate-300 m-2 flex justify-between flex-col items-center grap-5 items-start w-40"
             key={index}
           >
-            <div>
-              <h2 className="">{t.title}</h2>
-              <div>{t.description}</div>
-            </div>
-            <img className="" src={`${t.Image}`} alt={t.title} />
-
-            <div className="flex">
-              <Link href={`/product/${t._id}`}>
-                <HiPencilAlt size={24} />
-              </Link>
-            </div>
+            <Link href={`/product/${t._id}`} className="relative">
+              <GiCondorEmblem size={24} className="absolute top-1 left-1 text-white" />
+              <img className="w-full p-0" src={`${t.Image}`} alt={t.title} />
+              <span>Price</span>
+            </Link>
           </div>
         ))
       )}
