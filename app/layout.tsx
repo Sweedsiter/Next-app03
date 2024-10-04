@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dx-emb | Next-app03",
+  title: "Dx-emb",
   description: "dxemb,dxebm,emb,ebm",
 };
 

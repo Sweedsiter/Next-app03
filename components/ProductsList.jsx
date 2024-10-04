@@ -19,7 +19,7 @@ export default async function TopicsList() {
   const { topics } = await getTopics();
   return (
     <>
-      <div className="flex flex-wrap w-full items-center p-2 ">
+      <div className="flex flex-wrap w-full justify-center p-2 ">
         {!topics ? (
           <span>Please wait...</span>
         ) : (

@@ -21,8 +21,10 @@ export default function Navbar() {
             href={"/"}
             className="text-xl font-bold  flex flex-row items-center"
           >
-            <GiCondorEmblem className="mr-2 text-3xl" />
-            <h1 className="ml-1">Dx-emb</h1>
+            <GiCondorEmblem className="mr-1 text-3xl" />
+            <h1 className=" underline underline-offset-[6px]  decoration-orange-500">
+              Dx-emb
+            </h1>
           </Link>
           <div className="flex justify-between items-center flex-row">
             <input
