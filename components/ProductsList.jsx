@@ -19,13 +19,13 @@ export default async function TopicsList() {
   const { topics } = await getTopics();
   return (
     <>
-      <div className="flex flex-wrap w-full justify-center p-2 ">
+      <div className="flex flex-wrap w-full p-2 justify-center">
         {!topics ? (
           <span>Please wait...</span>
         ) : (
           topics?.map((t, index) => (
             <div
-              className="border border-slate-300 m-1 flex flex-col items-center w-44 h-52 justify-items-center"
+              className="border border-slate-300 m-1 flex flex-col w-44 h-52  "
               key={index}
             >
               <Link href={`/product/${t._id}`} className="relative">
@@ -36,7 +36,7 @@ export default async function TopicsList() {
                 <img className="w-full p-0" src={`${t.Image}`} alt={t.title} />
                 <div className="flex justify-between p-1">
                   <span className="text-borderase text-red-600">
-                    ราคาปกติ :{" "}
+                    ราคาปกติ :
                     <span className="line-through text-sm">300-.</span>
                   </span>
                   <span>150-.</span>
