@@ -22,7 +22,7 @@ export default function Navbar() {
             className="text-xl font-bold  flex flex-row items-center"
           >
             <GiCondorEmblem className="mr-1 text-3xl" />
-            <h1 className=" underline underline-offset-[6px]  decoration-orange-500">
+            <h1 className=" underline underline-offset-[6px] decoration-orange-500 ease-in duration-150 hover:text-orange-300">
               Dx-emb
             </h1>
           </Link>
