@@ -3,7 +3,7 @@ import { GiCondorEmblem } from "react-icons/gi";
 
 const getTopics = async () => {
   try {
-    const res = await fetch("https://46t6s8-3000.csb.app/api/topics", {
+    const res = await fetch("https://gsql99-3000.csb.app/api/topics", {
       cache: "no-store",
     });
     if (!res.ok) {
