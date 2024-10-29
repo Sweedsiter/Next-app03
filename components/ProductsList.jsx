@@ -1,22 +1,7 @@
 import Link from "next/link";
 import { GiCondorEmblem } from "react-icons/gi";
 
-const getTopics = async () => {
-  try {
-    const res = await fetch("https://gsql99-3000.csb.app/api/topics", {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      throw new Error("Failed to fetch topic");
-    }
-    return res.json();
-  } catch (error) {
-    console.log("Error loading Topic", error);
-  }
-};
-
-export default async function TopicsList() {
-  const { topics } = await getTopics();
+export default function TopicsList({ topics }) {
   return (
     <>
       <div className="flex flex-wrap w-full p-2 justify-center">
