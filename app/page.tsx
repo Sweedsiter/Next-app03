@@ -1,5 +1,3 @@
-
-
 import ProductsList from "@/components/ProductsList";
 import MenuList from "@/components/conteners/MenuList";
 
@@ -20,14 +18,12 @@ const getTopics = async () => {
 export default async function Home() {
   const { topics } = await getTopics();
 
-
   return (
     <>
       <div className="body ">
         <div className="L_detail border border-slate-300 flex flex-col">
           <MenuList topics={topics} />
         </div>
-
         <ProductsList topics={topics} />
       </div>
     </>
