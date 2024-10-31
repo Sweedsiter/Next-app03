@@ -1,9 +1,8 @@
 import ProductsList from "@/components/ProductsList";
-import MenuList from "@/components/conteners/MenuList";
 
 const getTopics = async () => {
   try {
-    const res = await fetch("https://gsql99-3000.csb.app/api/topics", {
+    const res = await fetch("https://7vgvmq-3001.csb.app/api/topics", {
       cache: "no-store",
     });
     if (!res.ok) {
@@ -21,9 +20,6 @@ export default async function Home() {
   return (
     <>
       <div className="body ">
-        <div className="L_detail border border-slate-300 flex flex-col">
-          <MenuList topics={topics} />
-        </div>
         <ProductsList topics={topics} />
       </div>
     </>
