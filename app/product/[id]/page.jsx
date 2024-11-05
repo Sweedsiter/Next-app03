@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const getTopicById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+    const res = await fetch(`https://mrzzng-3000.csb.app/api/topics/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {
