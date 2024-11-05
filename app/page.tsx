@@ -2,7 +2,7 @@ import ProductsList from "@/components/ProductsList";
 
 const getTopics = async () => {
   try {
-    const res = await fetch("https://mrzzng-3000.csb.app/api/topics", {
+    const res = await fetch("http://localhost:3000/api/topics", {
       cache: "no-store",
     });
     if (!res.ok) {
