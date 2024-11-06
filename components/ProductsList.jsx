@@ -68,7 +68,7 @@ export default function TopicsList({ topics }) {
         ) : SeletGr && !SName ? (
           SeletGr?.map((t, index) => (
             <div
-              className="border rounded-lg border-slate-300 m-1 flex flex-col w-44 h-fit p-1  bg-white desktop:drop-shadow "
+              className="border rounded-lg border-slate-300 m-1 flex flex-col w-44 h-fit p-1  bg-white desktop:drop-shadow duration-300 hover:p-0 "
               key={index}
             >
               <Link href={`/product/${t._id}`} className="relative">
@@ -91,7 +91,7 @@ export default function TopicsList({ topics }) {
         ) : Search.length ? (
           Search?.map((t, index) => (
             <div
-              className="border rounded-lg border-slate-300 m-1 flex flex-col w-44  h-fit p-1   bg-white desktop:drop-shadow"
+              className="border rounded-lg border-slate-300 m-1 flex flex-col w-44  h-fit p-1   bg-white desktop:drop-shadow duration-300 hover:p-0"
               key={index}
             >
               <Link href={`/product/${t._id}`} className="relative">
@@ -114,7 +114,7 @@ export default function TopicsList({ topics }) {
         ) : (
           topics?.map((t, index) => (
             <div
-              className="border rounded-lg border-slate-300 m-1 flex flex-col w-44  h-fit p-1   bg-white desktop:drop-shadow"
+              className="border rounded-lg border-slate-300 m-1 flex flex-col w-44  h-fit p-1   bg-white desktop:drop-shadow duration-300 hover:p-0"
               key={index}
             >
               <Link href={`/product/${t._id}`} className="relative">

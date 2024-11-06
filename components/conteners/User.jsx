@@ -4,7 +4,7 @@ import { BsBasket3Fill } from "react-icons/bs";
 export default function User() {
   const Basket = 9;
   return (
-    <>
+    <div>
       <Link href={"/api/topics"}>
         <h1 className="duration-150 hover:bg-slate-100 hover:pl-2 py-1 text-xl font-bold">
           User Status
@@ -38,6 +38,6 @@ export default function User() {
           Log-out
         </Link>
       </div>
-    </>
+    </div>
   );
 }
