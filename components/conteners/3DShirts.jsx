@@ -5,8 +5,8 @@ export default function DShirts() {
         <iframe
           title="T-Shirt"
           allow="autoplay;fullscreen;"
-          width="400"
-          height="400"
+          width="360"
+          height="360"
           src="https://sketchfab.com/models/a8e5fb89e3104f4fb61a222063afc8f7/embed"
         ></iframe>
       </div>
@@ -15,8 +15,8 @@ export default function DShirts() {
         <iframe
           title="Polo"
           allow="autoplay;fullscreen;"
-          width="400"
-          height="400"
+          width="360"
+          height="360"
           src="https://sketchfab.com/models/8bcc849495c34a96882420f3fd98329a/embed"
         ></iframe>
       </div>
