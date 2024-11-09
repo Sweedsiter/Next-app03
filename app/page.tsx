@@ -2,7 +2,7 @@ import ProductsList from "@/components/ProductsList";
 
 const getTopics = async () => {
   try {
-    const res = await fetch("https://hsjm4q-3000.csb.app/api/topics", {
+    const res = await fetch("https://w7nl2c-3000.csb.app/api/topics", {
       cache: "no-store",
     });
     if (!res.ok) {
