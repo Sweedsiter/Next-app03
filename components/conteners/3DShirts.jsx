@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { ModelViewer } from "@/components/conteners/3Dmodel";
 
 export default function DShirts() {
   return (
     <div className=" flex flex-col desktop:flex-row w-full items-center ">
       {/* 3D Model  */}
-      <ModelViewer />
+
       {/* 3D */}
       <div className="border rounded-lg border-slate-300 m-1 flex flex-col p-1  bg-white desktop:drop-shadow duration-300 hover:p-0 ">
         <iframe
