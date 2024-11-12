@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 const getTopicById = async (id) => {
@@ -14,7 +15,7 @@ const getTopicById = async (id) => {
   }
 };
 
-export default async function OneList({ params }) {
+export default async function OneList({ params}) {
   const { id } = params;
   const { topic } = await getTopicById(id);
 

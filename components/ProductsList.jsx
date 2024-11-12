@@ -7,8 +7,6 @@ import User from "@/components/conteners/User";
 export default function TopicsList({ topics }) {
   const [SeletGr, setSeletGr] = useState();
   const [SName, setSName] = useState();
-  const [basket, setbasket] = useState();
-  console.log(basket);
 
   const Search = topics.filter((Data) => {
     if (SName) {
@@ -116,7 +114,6 @@ export default function TopicsList({ topics }) {
         ) : (
           topics?.map((t, index) => (
             <div
-              onClick={() => setbasket(t._id)}
               className="border rounded-lg border-slate-300 m-1 flex flex-col w-44  h-fit p-1   bg-white desktop:drop-shadow duration-300 hover:p-0"
               key={index}
             >
