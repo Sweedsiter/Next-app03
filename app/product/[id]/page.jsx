@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const getTopicById = async (id) => {
   try {
-    const res = await fetch(`https://8ww486-3000.csb.app/api/topics/${id}`, {
+    const res = await fetch(`https://next-app03.vercel.app/api/topics/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {
