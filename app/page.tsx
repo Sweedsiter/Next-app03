@@ -2,7 +2,7 @@ import ProductsList from "@/components/ProductsList";
 
 const getTopics = async () => {
   try {
-    const res = await fetch("https://8ww486-3000.csb.app/api/topics", {
+    const res = await fetch("https://next-app03.vercel.app/api/topics", {
       cache: "no-store",
     });
     if (!res.ok) {
